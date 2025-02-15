@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+  background-color: #0D1B2A; /* Ensures background color */
+  color: #E0E1DD; /* Ensures text visibility */
+}
+
+/* Fade-in Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Navigation Styling */
+nav {
+  background-color: #0D1B2A;
+  padding: 1rem;
+}
+nav a {
+  color: #E0E1DD;
+  text-decoration: none;
+}
+nav a:hover {
+  color: #F4A261;
+}
