@@ -1,53 +1,70 @@
 "use client";
-
+import { useState, useEffect } from "react";
 import { Typewriter } from "react-simple-typewriter";
-import GlowingDots from "@/components/GlowingDots";  // ✅ Animated dots component
-import { Lora } from "next/font/google";  // ✅ Import Lora font
+import { Lora } from "next/font/google";
+import { motion } from "framer-motion";
 
 const lora = Lora({ subsets: ["latin"], weight: ["400", "600"] });
 
 export default function Hero() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-screen text-center bg-[#0D1B2A] text-[#E0E1DD] pb-10">
+    <section className="relative flex flex-col items-center justify-center min-h-[92vh] text-center bg-[#1B4543] text-[#E0E1DD] pt-32">
       
-      {/* Animated Dots */}
-      <GlowingDots />
+      {/* Title Animation */}
+      <motion.h1
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="text-5xl font-bold"
+      >
+        Hi, <span className="text-[#F0BE6F] glow-text">Vinni</span> here.
+      </motion.h1>
 
-      {/* Heading */}
-      <h1 className="text-5xl font-bold">
-        Hi, <span className="text-[#F4A261]">Vinni</span> here.
-      </h1>
-
-      {/* Animated Quote */}
-      <span className={`${lora.className} mt-6 text-2xl text-[#F4A261]`}>
-        <Typewriter
-          words={[
-            "I create stuff sometimes.",
-            "I love building things.",
-            "I solve problems with code."
-          ]}
-          loop={true}
-          cursor
-          cursorStyle="|"
-          typeSpeed={60}
-          deleteSpeed={40}
-        />
-      </span>
+      {/* Typewriter Text */}
+      <motion.span
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5, duration: 1 }}
+        className={`${lora.className} mt-4 text-2xl text-[#F0BE6F]`}
+      >
+        {isClient ? (
+          <Typewriter
+            words={["I solve problems with code."]}
+            loop={true}
+            cursor
+            cursorStyle="|"
+            typeSpeed={60}
+            deleteSpeed={40}
+          />
+        ) : (
+          "Loading..."
+        )}
+      </motion.span>
 
       {/* Description */}
-      <p className={`${lora.className} mt-8 max-w-2xl text-lg text-[#AAB3BE] leading-relaxed text-center`}>
+      <p className="mt-6 max-w-2xl text-lg text-[#AAB3BE] leading-relaxed">
         A software engineer passionate about turning ideas into impactful solutions.
-        Whether it's designing intuitive interfaces or developing scalable applications, 
+        Whether it's designing intuitive interfaces or developing scalable applications,
         I bring creativity and logic together to build something meaningful.
       </p>
 
-      {/* Outlined "Ping Me!" Button */}
-      <a href="mailto:vsadras@syr.edu" 
-         className="mt-6 px-6 py-3 rounded-lg border-2 border-[#F4A261] text-[#F4A261] font-semibold text-lg shadow-md 
-                    hover:bg-[#F4A261] hover:text-[#0D1B2A] transition-all duration-300">
-         Ping Me!
-      </a>
-
+      {/* Ping Me Button */}
+      <motion.a
+        href="mailto:vsadras@syr.edu"
+        className="mt-8 px-6 py-3 rounded-lg border-2 border-[#F0BE6F] text-[#F0BE6F] font-semibold text-lg shadow-md
+                   hover:bg-[#F0BE6F] hover:text-[#1B4543] transition-all duration-300"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        Ping Me!
+      </motion.a>
+      
     </section>
   );
 }

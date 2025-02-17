@@ -4,7 +4,9 @@ import { useEffect } from "react";
 import Hero from "@/components/Hero";
 import AboutMe from "@/components/AboutMe";
 import Experience from "@/components/Experience";
-import Projects from "@/components/Projects";  // ✅ Ensure it's imported correctly
+import Projects from "@/components/Projects";
+import OpenSource from "@/components/OpenSource";
+import Leadership from "@/components/Leadership";
 
 export default function Home() {
   useEffect(() => {
@@ -24,23 +26,33 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex flex-col items-center justify-center">
-      {/* Hero Section (Appears First) */}
+    <main className="flex flex-col items-center justify-center bg-[#1B4543] text-[#E0E1DD] px-8 space-y-16">
+      {/* Hero Section */}
       <Hero />
 
-      {/* About Me Section (Appears on Scroll) */}
-      <section id="about" className="fade-in">
+      {/* About Me Section */}
+      <section id="about" className="fade-in w-full max-w-6xl">
         <AboutMe />
       </section>
 
-      {/* Professional Experience Section (Appears on Scroll) */}
-      <section id="experience" className="fade-in">
+      {/* Experience Section */}
+      <section id="experience" className="fade-in w-full max-w-6xl">
         <Experience />
       </section>
 
-      {/* Projects Section (Appears on Scroll) */}
-      <section id="projects" className="fade-in">
+      {/* Projects Section */}
+      <section id="projects" className="fade-in w-full max-w-6xl">
         <Projects />
+      </section>
+
+      {/* Open Source Section */}
+      <section id="opensource" className="fade-in w-full max-w-6xl">
+        <OpenSource />
+      </section>
+
+      {/* Leadership Section */}
+      <section id="leadership" className="fade-in w-full max-w-6xl">
+        <Leadership />
       </section>
     </main>
   );

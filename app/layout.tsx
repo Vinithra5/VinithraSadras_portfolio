@@ -1,17 +1,6 @@
 import Navbar from "@/components/Navbar"; 
 import "../styles/globals.css";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Vinithra Portfolio",
@@ -20,10 +9,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-<body className="bg-[#0D1B2A] text-[#E0E1DD] antialiased">
-<Navbar /> 
-        {children} 
+    <html lang="en" className="bg-[#1B4543] text-[#E0E1DD] antialiased">
+      <body>
+        <Navbar />  {/* Navbar is included in every page */}
+        {children}   {/* This will be replaced by the specific page's content */}
       </body>
     </html>
   );

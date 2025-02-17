@@ -1,5 +1,3 @@
-/* app/globals.css */
-
 /* Enable smooth scrolling */
 html, body {
   scroll-behavior: smooth;
@@ -14,13 +12,18 @@ main {
   min-height: 100vh;
 }
 
-/* Ensure sections are fully visible */
-section {
+/* Apply full height only to specific sections */
+#hero, #about, #experience {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 5rem; /* Prevents content from disappearing */
+}
+
+#projects {
+  min-height: auto;  /* Already set correctly */
+  display: block;     /* Ensures no flex issues */
+  padding-bottom: 0;  /* Fixes extra space */
 }
 
 /* Smooth fade-in effect */

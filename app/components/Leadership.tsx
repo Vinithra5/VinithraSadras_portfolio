@@ -1,0 +1,37 @@
+"use client";
+import React from "react";
+import { FaUsers } from "react-icons/fa";
+
+const leadership = [
+  {
+    role: "University Conduct Board Member",
+    description: "Actively involved in maintaining student conduct policies and ensuring a fair university environment.",
+  },
+  {
+    role: "Team Lead - Software Development",
+    description: "Led a team of 5 developers to successfully build and deploy a full-stack application under a tight deadline.",
+  },
+];
+
+export default function Leadership() {
+  return (
+    <section id="leadership" className="w-full py-12 px-6 md:px-20 mx-auto max-w-6xl">
+  <h2 className="text-4xl font-bold text-[#F0BE6F] mb-8">Leadership & Volunteering</h2>
+
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {leadership.map((item, index) => (
+          <div key={index} className="bg-[#1E2D2F] rounded-lg p-6 shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+            <div className="flex items-center gap-4">
+              <FaUsers className="text-[#F0BE6F] text-3xl" />
+              <div>
+                <h3 className="text-lg font-semibold text-[#F0BE6F]">{item.role}</h3>
+                <p className="text-[#AAB3BE] mt-2">{item.description}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}

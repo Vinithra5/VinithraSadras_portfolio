@@ -5,7 +5,7 @@
 /* Smooth Scrolling */
 html {
   scroll-behavior: smooth;
-  background-color: #0D1B2A; /* Ensures background color */
+  background-color: #1B4543; /* Ensures background color */
   color: #E0E1DD; /* Ensures text visibility */
 }
 
@@ -22,7 +22,7 @@ html {
 
 /* Navigation Styling */
 nav {
-  background-color: #0D1B2A;
+  background-color: #1B4543;
   padding: 1rem;
 }
 nav a {
@@ -30,5 +30,5 @@ nav a {
   text-decoration: none;
 }
 nav a:hover {
-  color: #F4A261;
+  color: #F0BE6F;
 }
