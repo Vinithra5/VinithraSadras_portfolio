@@ -36,15 +36,18 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="w-full py-12 px-6 md:px-20 mx-auto max-w-6xl">
-    {/* Reduced `mb-12` to `mb-8` for closer spacing */}
-    <h2 className="text-4xl font-bold text-[#F0BE6F] mb-6">Projects</h2>
+    <section id="projects" className="w-full px-6 md:px-20 mx-auto max-w-6xl mt-12">
+      {/* 🔹 Adjusted margin-bottom to ensure proper spacing */}
+      <h2 className="text-4xl font-bold text-[#F0BE6F] mb-10">Projects</h2>
 
-
-      {/* ✅ Fixed Left-Right Margins & Grid Alignment */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* ✅ Fixed Grid & Card Alignment */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
         {projects.map((project, index) => (
-          <div key={index} className="bg-[#1E2D2F] rounded-lg p-6 shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+          <div
+            key={index}
+            className="bg-[#1E2D2F] rounded-lg p-6 shadow-md transition-transform duration-300 
+                       hover:scale-105 hover:shadow-lg flex flex-col h-full"
+          >
             {/* Project Header */}
             <div className="flex justify-between items-center mb-4">
               <FaFolderOpen className="text-[#F0BE6F] text-3xl" />
@@ -62,7 +65,7 @@ export default function Projects() {
             <h3 className="text-lg font-semibold text-[#F0BE6F]">{project.title}</h3>
 
             {/* Project Description */}
-            <p className="text-[#AAB3BE] mt-2">{project.description}</p>
+            <p className="text-[#AAB3BE] mt-2 flex-grow">{project.description}</p>
 
             {/* Technologies */}
             <p className="text-sm text-[#AAB3BE] mt-2 italic">{project.tech}</p>

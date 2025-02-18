@@ -35,7 +35,7 @@ export default function Experience() {
   const [selectedExperience, setSelectedExperience] = useState(experiences[0]);
 
   return (
-    <section id="experience" className="min-h-screen px-6 md:px-20 bg-[#1B4543] text-[#E0E1DD] pt-20 pb-16">
+    <section id="experience" className="px-6 md:px-20 bg-[#1B4543] text-[#E0E1DD] pt-16 pb-4">
       {/* ✅ Left-Aligned Heading with Spacing */}
       <h2 className="text-4xl font-bold text-[#F0BE6F] mb-12">Experience</h2>
 

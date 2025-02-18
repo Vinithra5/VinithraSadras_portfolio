@@ -1,36 +1,13 @@
-/* Enable smooth scrolling */
-html, body {
+/* Smooth scrolling */
+html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
-  height: 100%;
 }
 
-/* Ensure main content takes full height */
-main {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-/* Apply full height only to specific sections */
-#hero, #about, #experience {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#projects {
-  min-height: auto;  /* Already set correctly */
-  display: block;     /* Ensures no flex issues */
-  padding-bottom: 0;  /* Fixes extra space */
-}
-
-/* Smooth fade-in effect */
+/* Subtle fade-in effect on sections */
 .fade-in {
   opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .fade-in.show {
@@ -38,9 +15,41 @@ main {
   transform: translateY(0);
 }
 
-/* Responsive Fixes */
-@media (max-width: 768px) {
-  section {
-    padding-bottom: 3rem;
-  }
+/* Glow Effect for Headings */
+h2 {
+  text-shadow: 0 0 10px rgba(240, 190, 111, 0.7);
+}
+
+/* Project Box Hover Effect */
+.project-box {
+  transition: all 0.3s ease-in-out;
+}
+
+.project-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 20px rgba(240, 190, 111, 0.4);
+}
+
+/* Interactive Links */
+a {
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #F0BE6F;
+  text-decoration: underline;
+}
+
+/* Glassmorphism Card Effect */
+.glass-card {
+  background: rgba(30, 45, 47, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.glass-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
 }

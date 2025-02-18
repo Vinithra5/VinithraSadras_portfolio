@@ -14,7 +14,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-[92vh] text-center bg-[#1B4543] text-[#E0E1DD] pt-32">
+    <section className="relative flex flex-col items-center justify-center min-h-[92vh] text-center bg-[#1B4543] text-[#E0E1DD] pt-32 px-6">
       
       {/* Title Animation */}
       <motion.h1
@@ -39,8 +39,9 @@ export default function Hero() {
             loop={true}
             cursor
             cursorStyle="|"
-            typeSpeed={60}
-            deleteSpeed={40}
+            typeSpeed={50}
+            deleteSpeed={30}
+            delaySpeed={2000}  // Added delay before looping
           />
         ) : (
           "Loading..."

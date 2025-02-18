@@ -1,36 +1,68 @@
 "use client";
-import React from "react";
-import { FaUsers } from "react-icons/fa";
 
-const leadership = [
+import { useState } from "react";
+import { motion } from "framer-motion";
+
+// Leadership Roles
+const leadershipRoles = [
   {
     role: "University Conduct Board Member",
-    description: "Actively involved in maintaining student conduct policies and ensuring a fair university environment.",
+    description: [
+      "Worked with university administration to ensure fair student policies and maintain discipline.",
+      "Assisted in ethical reviews, student hearings, and policy enforcement.",
+    ],
   },
   {
     role: "Team Lead - Software Development",
-    description: "Led a team of 5 developers to successfully build and deploy a full-stack application under a tight deadline.",
+    description: [
+      "Managed a team of 5 developers to build and deploy a full-stack application.",
+      "Ensured optimized workflow, met tight deadlines, and improved team productivity.",
+    ],
   },
 ];
 
 export default function Leadership() {
+  const [selectedRole, setSelectedRole] = useState(leadershipRoles[0]);
+
   return (
-    <section id="leadership" className="w-full py-12 px-6 md:px-20 mx-auto max-w-6xl">
-  <h2 className="text-4xl font-bold text-[#F0BE6F] mb-8">Leadership & Volunteering</h2>
+    <section id="leadership" className="px-6 md:px-20 bg-[#1B4543] text-[#E0E1DD] pt-16 pb-4">
+      <h2 className="text-4xl font-bold text-[#F0BE6F] mb-12">Leadership & Volunteering</h2>
 
+      <div className="flex flex-col md:flex-row">
+        {/* Sidebar - Role List */}
+        <div className="md:w-1/4 flex flex-col border-r border-[#2A6462] p-5">
+          {leadershipRoles.map((role, index) => (
+            <button
+              key={index}
+              onClick={() => setSelectedRole(role)}
+              className={`py-2 text-left text-lg font-medium ${
+                selectedRole.role === role.role
+                  ? "text-[#F0BE6F] border-l-4 border-[#F0BE6F] pl-2"
+                  : "text-[#AAB3BE] hover:text-[#F0BE6F]"
+              }`}
+            >
+              {role.role}
+            </button>
+          ))}
+        </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {leadership.map((item, index) => (
-          <div key={index} className="bg-[#1E2D2F] rounded-lg p-6 shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl">
-            <div className="flex items-center gap-4">
-              <FaUsers className="text-[#F0BE6F] text-3xl" />
-              <div>
-                <h3 className="text-lg font-semibold text-[#F0BE6F]">{item.role}</h3>
-                <p className="text-[#AAB3BE] mt-2">{item.description}</p>
-              </div>
-            </div>
+        {/* Role Details */}
+        <motion.div
+          key={selectedRole.role}
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="md:w-3/4 flex flex-col justify-between p-6"
+        >
+          <div className="md:w-2/3 text-left">
+            <h3 className="text-2xl font-semibold text-[#F0BE6F]">{selectedRole.role}</h3>
+            <ul className="list-disc pl-5 text-[#AAB3BE] space-y-2 mt-3">
+              {selectedRole.description.map((detail, i) => (
+                <li key={i}>{detail}</li>
+              ))}
+            </ul>
           </div>
-        ))}
+        </motion.div>
       </div>
     </section>
   );
