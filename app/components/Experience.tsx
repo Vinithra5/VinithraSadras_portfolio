@@ -18,17 +18,7 @@ const experiences = [
       "Collaborated with Agile teams to ensure timely project delivery.",
     ],
   },
-  {
-    company: "Darwinbox",
-    role: "Frontend Developer Intern",
-    location: "Hyderabad, India",
-    period: "Feb 2022 – Aug 2022",
-    logo: "/images/darwinbox.png",
-    details: [
-      "Developed dynamic dashboards and enhanced HR tools using React and TypeScript.",
-      "Improved application performance by implementing lazy loading and code splitting.",
-    ],
-  },
+  
 ];
 
 export default function Experience() {

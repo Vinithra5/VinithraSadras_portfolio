@@ -51,7 +51,7 @@ export default function Hero() {
       {/* Description */}
       <p className="mt-6 max-w-2xl text-lg text-[#AAB3BE] leading-relaxed">
         A software engineer passionate about turning ideas into impactful solutions.
-        Whether it's designing intuitive interfaces or developing scalable applications,
+        Whether it&apos;s designing intuitive interfaces or developing scalable applications,
         I bring creativity and logic together to build something meaningful.
       </p>
 
