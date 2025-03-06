@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: "export",
-    basePath: "/VinithraSadras_portfolio",  // Change this to match your repo name
+    basePath: "/VinithraSadras_portfolio", 
+    assetPrefix: "/VinithraSadras_portfolio/", 
     images: {
       unoptimized: true
     }
   };
   
   module.exports = nextConfig;
-  
