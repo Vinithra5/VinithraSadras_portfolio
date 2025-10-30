@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* NOTE:
+   This file intentionally contains only the Tailwind directives to avoid
+   parsing errors from pre-generated CSS. Add small custom rules below if needed.
+*/
