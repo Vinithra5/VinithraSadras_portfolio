@@ -43,12 +43,11 @@ export default function Hero() {
         )}
       </motion.span>
       <p className="mt-6 max-w-2xl text-lg text-[#AAB3BE] leading-relaxed">
-        A software engineer passionate about turning ideas into impactful solutions. Whether it&apos;s designing
-        intuitive interfaces or developing scalable applications, I bring creativity and logic together to build
-        something meaningful.
+          A curious <span className="font-bold text-[#F0BE6F]">tech enthusiast</span> who loves crafting thoughtful user
+          experiences and building systems that truly make an impact.
       </p>
       <motion.a
-        href="mailto:vsadras@syr.edu"
+        href="mailto:vinithrasadras01@gmail.com"
         className="mt-8 px-6 py-3 rounded-lg border-2 border-[#F0BE6F] text-[#F0BE6F] font-semibold text-lg
                    hover:bg-[#F0BE6F] hover:text-[#1B4543] transition-all duration-300"
         whileHover={{ scale: 1.05 }}

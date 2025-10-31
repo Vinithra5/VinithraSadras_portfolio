@@ -12,7 +12,7 @@ const experiences = [
     period: "June 2025 – Present",
     logo: "/images/syracuse.jpg",
     description:
-      "I'm currently working on some really exciting IoT and distributed systems research. My focus has been on building modular Flask microservices that can handle massive amounts of telemetry data in real time. What I love most about this role is architecting event driven workflows using AWS Lambda, S3, and CloudWatch. It's been incredible to see how these systems can scale and become 70% more efficient with the right design. I've also been diving deep into containerized Linux environments and CI pipelines, making sure everything deploys smoothly across distributed systems. One of the coolest parts has been integrating LangChain with lightweight ML models to automate data interpretation, which feels like bringing a bit of intelligence into the system. Performance optimization is a big part of what I do, tweaking multi threaded caching and serialization to squeeze out every bit of efficiency under heavy loads. And with AWS QuickSight, I can monitor everything in real time, which makes debugging and validation so much more intuitive.",
+      "This project started from my curiosity about how cloud systems could make real-world problems smarter. I built a Smart IoT Irrigation framework that connects field sensors with distributed cloud workflows. I designed modular Flask microservices to process live telemetry and automated everything through AWS IoT Core, Lambda, and S3. I also containerized deployments so everything runs smoothly in real time, even under heavy data loads. Later, I integrated LangChain and lightweight ML models to add predictive intelligence — and seeing the system become 80% more efficient with almost zero manual effort was honestly the most rewarding part.",
   },
   {
     company: "Syracuse University",
@@ -21,7 +21,7 @@ const experiences = [
     period: "Jan 2024 – May 2025",
     logo: "/images/syracuse.jpg",
     description:
-      "Teaching has been one of the most rewarding experiences for me. I've had the chance to guide over 100 students through Java and OOP fundamentals, helping them understand not just the syntax but the principles behind writing modular, scalable code. I really enjoy the debugging sessions. There's something satisfying about helping someone finally understand why their code isn't working. To make grading more efficient, I built Python automation scripts that cut turnaround time by 60%, which gave me more time to focus on actually helping students. I also integrated backend testing and API modules into the coursework, so students could see how the concepts they're learning apply to real world software architecture. It's been great to see them connect the dots between theory and practice.",
+      "As a Teaching Assistant for Java and Object-Oriented Programming, I guided over 100 students in writing clean, modular, and scalable code. I developed Python automation scripts that reduced grading time by 60%, enabling faster feedback cycles and better student performance tracking. To make the coursework more industry-relevant, I integrated backend testing frameworks and API modules, helping students understand how core programming principles extend into real-world software architecture."
   },
   {
     company: "Accenture",
@@ -30,7 +30,7 @@ const experiences = [
     period: "Jan 2023 – July 2023",
     logo: "/images/accenture.png",
     description:
-      "At Accenture, I worked on building distributed Spring Boot microservices for HDFC Bank, which was a fantastic opportunity to work on financial applications at scale. The challenge was making sure everything was reliable and could handle high transaction volumes. I spent a lot of time refactoring data access layers and optimizing service logic, and we managed to speed up transaction response times by up to 85%, which was a huge win. I also maintained robust CI/CD pipelines with Docker and Jenkins, ensuring that our automated testing and delivery cycles ran smoothly. Security was a top priority, so I worked extensively with IAM, encryption, and VPC based isolation to keep sensitive data protected and compliant. Performance tuning became second nature, profiling Linux runtime environments and optimizing thread level operations to keep everything stable under concurrent loads. Collaborating with DevOps, QA, and product teams taught me a lot about how to improve deployment speed and maintain consistency across different environments.",
+      "At Accenture, I engineered enterprise-grade banking platforms for HDFC Bank, modernizing legacy systems into modular Spring Boot microservices that improved platform stability and scalability. I enhanced CI/CD pipelines using Docker and Jenkins, increasing deployment reliability and release frequency. I developed RESTful services with Spring Boot, PostgreSQL, and AngularJS to streamline transactions and data flow across distributed systems. To meet security and compliance standards, I implemented JWT/OAuth2 authentication layers, ensuring safe and consistent API communication. Through architectural optimization and pipeline refinement, I boosted overall system performance by 70%.",
   },
 ]
 

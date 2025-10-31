@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa"
+import { FaGithub, FaLinkedin, FaEnvelope, FaMediumM } from "react-icons/fa"
 
 export default function Navbar() {
   return (
@@ -42,15 +42,34 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
+
         <div className="flex space-x-4 text-2xl">
-          <a href="mailto:vsadras@syr.edu">
+          <a href="mailto:vinithrasadras01@gmail.com" aria-label="Email">
             <FaEnvelope className="hover:text-[#F0BE6F]" />
           </a>
-          <a href="https://github.com/Vinithra5">
+          <a
+            href="https://github.com/Vinithra5"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
             <FaGithub className="hover:text-[#F0BE6F]" />
           </a>
-          <a href="https://linkedin.com/in/vinithra-sadras">
+          <a
+            href="https://linkedin.com/in/vinithra-sadras"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
             <FaLinkedin className="hover:text-[#F0BE6F]" />
+          </a>
+          <a
+            href="https://medium.com/@vinithrasadras01"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Medium"
+          >
+            <FaMediumM className="hover:text-[#F0BE6F]" />
           </a>
         </div>
       </div>

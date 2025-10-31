@@ -17,12 +17,13 @@ export default function AboutMe() {
           viewport={{ once: true }}
           className="md:w-3/5 text-left"
         >
-          <p className="text-lg text-[#AAB3BE] leading-relaxed mb-6">
-            I am currently a <span className="font-bold text-[#F0BE6F]">Software Developer</span>, passionate about
-            crafting clean, scalable, and efficient applications. Currently pursuing my{" "}
-            <span className="font-bold text-[#F0BE6F]">Master's in Computer Science at Syracuse University</span>, I
-            enjoy solving complex problems and creating impactful digital solutions.
-          </p>
+        <p className="text-lg text-[#AAB3BE] leading-relaxed mb-6">
+          I love solving problems and designing{" "}
+          <span className="font-bold text-[#F0BE6F]">smart, scalable systems</span> that actually make an impact.{" "}
+          With a <span className="font-bold text-[#F0BE6F]">Master’s in Computer Science from Syracuse University</span>, 
+          I mix <span className="font-bold text-[#F0BE6F]">developer logic</span> with 
+          <span className="font-bold text-[#F0BE6F]"> architect vision</span> to bring ideas to life.
+        </p>
           <h3 className="mt-6 text-xl text-[#F0BE6F]">Technologies I Work With:</h3>
           <ul className="grid grid-cols-2 gap-2 text-lg text-[#AAB3BE] mt-3">
             <li>• Python</li>
