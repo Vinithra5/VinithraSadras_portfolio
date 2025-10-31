@@ -1,12 +1,11 @@
 import type React from "react"
 import type { Metadata } from "next"
 import Navbar from "./components/Navbar"
-import '../styles/globals.css';
+import "../styles/globals.css"
 
 export const metadata: Metadata = {
   title: "Vinithra Sadras - Portfolio",
-  description: "Software Engineer passionate about building impactful solutions",
-    generator: 'v0.app'
+  description: "Tech enthusiast passionate about building impactful solutions",
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
